@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.niydiy.domain">
+	<class name="Customer" table="t_customer">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="custName" column="custer_name" type="string" />
+		<property name="custPhone" column="custer_phone" type="string" />
+		<property name="custAddress" column="custer_address" type="string" />
+	</class>
+</hibernate-mapping>

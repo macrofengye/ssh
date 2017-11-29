@@ -4,5 +4,14 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 	<package name="base" extends="struts-default" namespace="customer">
+		<!-- 由Spring统一管理 class为spring的bean的ID-->
+		<action name="userAction" class="userAction" method="test">
+			<result>/jsp/test.jsp</result>
+		</action>
+		
+		<!-- 由Struts2自己管理 , 只需要在Action类中提供setter方法就可以了，但是属性的名字必须与spring配置中的ID一样 -->
+		<action name="userAction" class="com.niydiy.controller.UserAction" method="test1">
+			<result>/jsp/test.jsp</result>
+		</action>
 	</package>
 </struts>
